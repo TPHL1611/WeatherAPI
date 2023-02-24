@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Weather API</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot icon"></i>
+                <input type="text" placeholder="Nhập địa điểm ..." />
+                <ion-icon name="search-outline" class="icon"></ion-icon>
+            </div>
+            <div class="weather-box--wrap">
+                <div class="weather-box">
+                    <div class="icon">
+                        <img src="" alt="" />
+                    </div>
+                    <p class="temperature"></p>
+                    <div class="wind-humidity--wrap">
+                        <div class="wind">
+                            <i class="fa-solid fa-water"></i>
+                            <p></p>
+                        </div>
+                        <div class="humidity">
+                            <i class="fa-solid fa-droplet"></i>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

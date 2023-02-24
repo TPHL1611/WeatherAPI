@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Mynerve&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --blue-green-dark: rgb(0 46 65);
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--blue-green-dark);
+}
+.container {
+    position: relative;
+}
+.search-box {
+    position: absolute;
+}
+.search-box input {
+    border: none;
+    padding: 20px 100px 20px 40px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: "Mynerve", cursive;
+}
+.search-box input:focus-visible {
+    outline: 0;
+}
+.search-box .icon {
+    position: absolute;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--blue-green-dark);
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.search-box .icon:first-child {
+    left: 5px;
+    background-color: transparent;
+    color: var(--blue-green-dark);
+    display: inline-block;
+    width: fit-content;
+}
+.weather-box--wrap {
+    height: 58.4px;
+    width: 335px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.weather-box--wrap.valid,
+.weather-box--wrap.invalid {
+    padding-top: 70px;
+    height: 375px;
+    border-radius: 15px;
+}
+.weather-box--wrap.invalid .wind-humidity--wrap {
+    display: none;
+}
+.weather-box {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.weather-box .icon {
+    width: 170px;
+    height: 170px;
+}
+.weather-box .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.weather-box .temperature {
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: bold;
+    font-family: "Kanit", sans-serif;
+}
+.weather-box .temperature sup {
+    font-family: "Kanit", sans-serif;
+}
+.weather-box .wind-humidity--wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.weather-box .wind,
+.weather-box .humidity {
+    display: flex;
+    align-items: center;
+}
+.weather-box .wind i,
+.weather-box .humidity i {
+    font-size: 22px;
+}
+.weather-box .wind p,
+.weather-box .humidity p {
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: "Mynerve", cursive;
+}
+.weather-box .wind p span,
+.weather-box .humidity p span {
+    margin-left: 3px;
+}
