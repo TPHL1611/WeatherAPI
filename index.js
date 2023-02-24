@@ -19,12 +19,8 @@ const weatherTypeList = [
         src: "./img/rain.png",
     },
     {
-        type: "Clouds",
-        src: "./img/sunny_with_clouds_icon.png",
-    },
-    {
         type: "Clear",
-        src: "./img/clear.png",
+        src: "./img/sun.png",
     },
 ];
 document

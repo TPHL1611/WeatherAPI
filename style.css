@@ -59,7 +59,7 @@ body {
 .weather-box--wrap.valid,
 .weather-box--wrap.invalid {
     padding-top: 70px;
-    height: 375px;
+    height: 425px;
     border-radius: 15px;
 }
 .weather-box--wrap.invalid .wind-humidity--wrap {
@@ -115,4 +115,10 @@ body {
 .weather-box .wind p span,
 .weather-box .humidity p span {
     margin-left: 3px;
+}
+.weather-box .copyright {
+    margin-top: 25px;
+}
+.weather-box .copyright p {
+    font-family: "Mynerve", cursive;
 }
