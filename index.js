@@ -5,6 +5,14 @@ let icon = document.querySelector(".weather-box .icon");
 let weatherBox = document.querySelector(".weather-box--wrap");
 const kevinDegree = 273.15;
 const APIKey = "8c4aa4d3404c3735e05e120ed737f962";
+function removeClass(element, className = "valid") {
+    element.classList.contains(className)
+        ? element.classList.remove(className)
+        : null;
+}
+function addClass(element, className = "valid") {
+    element.classList.add(className);
+}
 const weatherTypeList = [
     {
         type: "Clouds",
@@ -35,7 +43,8 @@ document
                 // data <=> response.json()
                 console.log(data);
                 if (data.cod === "404") {
-                    weatherBox.classList.add("invalid");
+                    removeClass(weatherBox, "valid");
+                    addClass(weatherBox, "invalid");
                     src = "./img/map.png";
                     temperature.innerHTML = "No location found!";
                     icon.querySelector("img").setAttribute("src", src);
@@ -45,7 +54,8 @@ document
                             src = weatherType.src;
                         }
                     });
-                    weatherBox.classList.add("valid");
+                    removeClass(weatherBox, "invalid");
+                    addClass(weatherBox);
                     icon.querySelector("img").setAttribute("src", src);
                     temperature.innerHTML =
                         Math.round((data.main.temp - kevinDegree).toFixed(2)) +
