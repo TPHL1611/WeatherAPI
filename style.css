@@ -6,6 +6,7 @@
 }
 :root {
     --blue-green-dark: rgb(0 46 65);
+    --active-color: #fff;
 }
 body {
     display: flex;
@@ -16,6 +17,76 @@ body {
 }
 .container {
     position: relative;
+}
+.clock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 115px;
+    padding-bottom: 20px;
+}
+.digit {
+    width: 12px;
+    position: relative;
+    height: 24px;
+}
+.digit + .digit {
+    margin-left: 2px;
+}
+.hours,
+.minutes,
+.seconds {
+    position: relative;
+    display: flex;
+}
+.segment {
+    width: 8px;
+    height: 2px;
+    background-color: var(--active-color);
+    opacity: 0.08;
+    position: absolute;
+    border-radius: 50px;
+    transition: opacity 400ms;
+}
+.colons {
+    display: flex;
+    justify-content: space-around;
+    height: 20px;
+    flex-direction: column;
+    transform: translateX(-2px);
+    margin: 0px 5px;
+}
+.colon {
+    width: 5px;
+    min-height: 5px;
+    background-color: var(--active-color);
+    border-radius: 50%;
+}
+.segment-2 {
+    transform-origin: top left;
+    transform: rotate(90deg) translate(2px, -1px);
+}
+.segment-3 {
+    transform-origin: top right;
+    transform: rotate(-90deg) translate(-2px, -1px);
+}
+.segment-4 {
+    transform: translateY(10px);
+}
+.segment-5 {
+    transform-origin: top left;
+    transform: rotate(90deg) translate(12px, -1px);
+}
+.segment-6 {
+    transform-origin: top right;
+    transform: rotate(-90deg) translate(-12px, -1px);
+}
+.segment-7 {
+    transform: translateY(20px);
+}
+.active {
+    opacity: 1;
 }
 .search-box {
     position: absolute;
@@ -121,4 +192,15 @@ body {
 }
 .weather-box .copyright p {
     font-family: "Mynerve", cursive;
+}
+@media screen and (max-width: 576px) {
+    .weather-box--wrap {
+        height: 62.4px;
+    }
+    .search-box input {
+        padding: 20px 85px 20px 55px;
+    }
+    .search-box .icon:first-child {
+        left: 10px;
+    }
 }
